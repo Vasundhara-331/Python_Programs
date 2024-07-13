@@ -1,0 +1,28 @@
+def search(a, s, low, high):
+    while low <= high:
+        mid = (high + low) // 2
+        if a[mid] == s:
+            return mid
+        elif a[mid] < s:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+lst = []
+r = int(input("Enter the range: "))
+for i in range(r):
+    x = int(input("Enter the number: "))
+    lst.append(x)
+
+# Sorting the list
+lst.sort()
+print("Sorted List is:", lst)
+
+s = int(input("Enter search element: "))
+result = search(lst, s, 0, len(lst) - 1)
+
+if result != -1:
+    print("Element found at position", str(result + 1))
+else:
+    print("Element not found")
