@@ -1,0 +1,9 @@
+def product(n):
+    p = 1
+    for i in range(n):
+        x = int(input("Enter the number:"))
+        p *= x
+    print("Product is:",p)
+
+n = int(input("Enter the limit:"))
+product(n)

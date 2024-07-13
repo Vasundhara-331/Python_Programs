@@ -1,0 +1,18 @@
+def palin(n):
+    if n <= 0:
+        print("Invalid input. Please enter a positive number.")
+    else:
+        d = 0
+        rev = 0
+        n1 = n
+        while n > 0:
+            d = n % 10
+            rev = rev * 10 + d
+            n = n // 10
+        if n1 == rev:
+            print(n1,"is Palindrome.")
+        else:
+            print(n1,"is not Palindrome.")
+
+n = int(input("Enter the number:"))
+palin(n)
