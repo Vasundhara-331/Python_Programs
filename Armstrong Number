@@ -1,0 +1,18 @@
+# A number is said to be an Armstrong Number if the sum of power of the number of digits of each individual digit is equal to the original number.
+n = int(input("Enter a number:"))
+d = 0
+sum = 0
+num = n
+l = len(str(n))
+print("Number of digits is:",l)
+if n <= 0:
+    print("Invalid input. Please enter a number greater than zero.")
+else:
+    while n > 0:
+        d = n % 10
+        sum += pow(d,l)
+        n = n // 10
+    if sum == num:
+        print(num,"is an Armstrong Number")
+    else:
+        print(num,"is not an Armstrong Number")

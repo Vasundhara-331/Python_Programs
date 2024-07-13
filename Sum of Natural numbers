@@ -1,0 +1,14 @@
+l = int(input("Enter the limit:"))
+if l <= 0:
+    print("Error")
+else:
+    i = 1
+    sum = 0
+    for i in range(l):
+        n = int(input("Enter the number:"))
+        if n <= 0:
+            print("Error.")
+            break
+        else:
+           sum += n
+    print("Sum is:",sum) 
